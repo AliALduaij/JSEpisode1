@@ -5,8 +5,14 @@
  * - logs "Hello <name>" if there is a name
  */
 function greet(name) {
-  // Your code here
+  if (name == false) {
+    console.log("Hello");
+  } else {
+    console.log("Hello ${name}");
+  }
 }
+
+greet("ali");
 
 /**
  * isOdd(n):
@@ -14,8 +20,14 @@ function greet(name) {
  * - returns true if it's odd, false otherwise
  */
 function isOdd(n) {
-  // Your code here
+  if (n % 2 === 0) {
+    return false;
+  } else {
+    return true;
+  }
 }
+
+isOdd(7);
 
 /**
  * oddsSmallerThan(n):
@@ -29,8 +41,13 @@ function isOdd(n) {
  * Hint: you can solve this without writing any loops!
  */
 function oddsSmallerThan(n) {
-  // Your code here
+  if (n % 2 === 0) {
+    return n / 2;
+  } else {
+    return n / 2 - 0.5;
+  }
 }
+oddsSmallerThan(30);
 
 /**
  * squareOrDouble(n):
@@ -43,8 +60,14 @@ function oddsSmallerThan(n) {
  * squareOrDouble(9) -> 81
  */
 function squareOrDouble(n) {
-  // Your code here
+  if (n % 2 === 0) {
+    return n * 2;
+  } else {
+    return n * n;
+  }
 }
+
+squareOrDouble();
 
 /**
  * ageFromBirthDate(birthDate):
@@ -60,7 +83,7 @@ function squareOrDouble(n) {
  *
  * e.g. (if we assume that the date today is September 23 2018):
  *    ageFromBirthDate(19870506) -> 31 (because the birthday already passed)
- *    ageFromBirthDate(19971110) -> 20 (because the birthday hasn't passed yet)
+ *    ageFromBirthDate(19971110) -> 21 (because the birthday hasn't passed yet)
  */
 function ageFromBirthDate(birthDate) {
   const _MS_PER_YEAR = 1000 * 60 * 60 * 24 * 365;
